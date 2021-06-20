@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>Change_me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+
+<body>
+  <p id="content"></p>
+
+  <div class="container">
+
+    <form id="myForm" action="/action_page.html">
+      First name: <input type="text" name="fname" value="Dorothy"><br>
+      Last name: <input type="text" name="lname" value="Akoth"><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myForm").action;
+        document.getElementById("demo").innerHTML = x;
+      }
+// 2.Callback functions are functions that takes in a function argument and gives acertain function to be called later
+      function myPronunciation(some) {
+        document.getElementById("content").innerHTML = some;
+      }
+
+      function myLanguage() {
+        myPronunciation("Swahili");
+      }
+
+      function myCitizen() {
+        myPronunciation("Kenyan");
+      }
+
+      myLanguage();
+      myCitizen();
+
+//3. The code will give us the output but in a sequence order
+
+
+    </script>
+
+
+</body>
+
+</html>
